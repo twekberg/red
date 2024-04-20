@@ -46,7 +46,6 @@ def main(args):
     """
     url = f'https://www.reddit.com/r/{args.subreddit}/' \
           f'{args.listing}.json?limit={args.limit}&t={args.timeframe}'
-    print(f'{url=}')
     fp = urllib.request.urlopen(url)
     json_bytes = fp.read()
     json_data = json.loads(json_bytes.decode("utf8", errors='ignore'))
